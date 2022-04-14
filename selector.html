@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load Hosted Jquery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // All Selector
+            $("*").css("font-family", "arial, sans-serif");
+
+            // Tag Name Selector
+            $("h1").css("color", "red");
+            $("h2").css("color", "blue");
+            $("div").css("border", "1px solid black")
+
+            // Id Selector
+            $("#example").css("border", "1px solid red");
+
+            // Class Selector
+            $(".para").css("color", "green");
+
+            // Combine Selector
+            $("div .test").css("background-color", "darkblue"); // Selecting .test inside div
+            $("div#example .test").css("color", "white"); // Selecting class test inside div#example
+        });
+    </script>
+    <title>Jquery Selector</title>
+</head>
+<body>
+    <!-- TYPE OF SELECTOR -->
+
+    <!-- $("tagName") -->
+    <!-- $("#id") -->
+    <!-- $(".className") -->
+    <!-- $("tag.className") -->
+    <!-- $("tag#id.className") -->
+    <!-- $("*") -->
+
+
+    <!-- CODE -->
+    <h1>Jquery Selector</h1>
+    <h2>This is h2</h2>
+
+    <div id="example">
+        <p class="para">Lorem ipsum dolor sit amet.</p>
+        <p class="test">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p class="para">Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div>
+        <p class="para">Lorem ipsum dolor sit amet.</p>
+        <p class="test">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p class="para">Lorem ipsum dolor sit.</p>
+    <p class="para test">Lorem ipsum dolor sit.</p>
+</body>
+</html>

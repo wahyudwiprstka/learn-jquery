@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // First & Last Filter
+            $("div:first").css("border", "1px solid black");
+            $("#example p:first").css("color", "red");
+            $("#example p:last").css("color", "blue");
+
+            //  Even & Odd Filter
+            // Index from 0
+            $("#example2 p:even").css("background-color", "lightgreen");
+            $("#example2 p:odd").css("background-color", "lightblue");
+
+            // Greater Than, Less Than, Equal Filter
+            // Index from 0
+            $("#example3 p:gt(2)").css("font-style", "italic");
+            $("#example3 p:lt(2)").css("font-weight", "bold");
+            $("#example3 p:eq(2)").css("text-decoration", "underline");
+
+            // Not(expr) Filter
+            $("#example4 p:not(p:eq(2))").css("background-color", "lightgrey");
+        });
+        
+    </script>
+</head>
+<body>
+    <!-- jQuery Filters -->
+    <!-- first, last, even, odd, gt(), lt(), eq(), animated, focus, not(expr) -->
+    <h1>jQuery Filters</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+
+    <div id="example">
+        <p>div#example paragraph 1</p>
+        <p>div#example paragraph 2</p>
+        <p>div#example paragraph 3</p>
+        <p>div#example paragraph 4</p>
+        <p>div#example paragraph 5</p>
+    </div><br>
+    <div id="example2">
+        <p>div#example2 paragraph 1</p>
+        <p>div#example2 paragraph 2</p>
+        <p>div#example2 paragraph 3</p>
+        <p>div#example2 paragraph 4</p>
+        <p>div#example2 paragraph 5</p>
+    </div><br>
+    <div id="example3">
+        <p>div#example3 paragraph 1</p>
+        <p>div#example3 paragraph 2</p>
+        <p>div#example3 paragraph 3</p>
+        <p>div#example3 paragraph 4</p>
+        <p>div#example3 paragraph 5</p>
+    </div><br>
+    <div id="example4">
+        <p>div#example4 paragraph 1</p>
+        <p>div#example4 paragraph 2</p>
+        <p>div#example4 paragraph 3</p>
+        <p>div#example4 paragraph 4</p>
+        <p>div#example4 paragraph 5</p>
+    </div>
+</body>
+</html>
