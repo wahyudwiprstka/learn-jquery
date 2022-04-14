@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Advanced Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            // ADVANCED SELECTOR
+            // $("parent > child")
+            // $("ancestor descendant")
+            // $("prev + next")
+            // $("prev ~ siblings")
+
+            $("document").ready(function(){
+                $("#example > p").css("color", "red"); // select immediate children of #example
+
+                $("#example2 p").css("color", "blue"); // select descendant of #example2
+
+                $("#example2 + div").css("background-color", "lightblue"); // select div that is next to #example2
+
+                $(".para2 ~ p").css("font-weight", "bold"); // select the siblings and next to para2
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Advanced Selector</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+
+    <div id="example">
+        <p>div#example paragraph 1</p>
+        <p>div#example paragraph 2</p>
+        <p>div#example paragraph 3</p>
+        <p>div#example paragraph 4</p>
+        <p>div#example paragraph 5</p>
+        <div>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+        </div>
+    </div><br>
+    <div id="example2">
+        <p>div#example2 paragraph 1</p>
+        <p>div#example2 paragraph 2</p>
+        <p>div#example2 paragraph 3</p>
+        <p>div#example2 paragraph 4</p>
+        <p>div#example2 paragraph 5</p>
+        <div>
+            <p>div inside #example2 paragraph</p>
+            <p>div inside #example2 paragraph</p>
+            <p>div inside #example2 paragraph</p>
+        </div>
+    </div>
+    <div id="example3">
+        <p>div#example3 paragraph 1</p>
+        <p>div#example3 paragraph 2</p>
+        <p>div#example3 paragraph 3</p>
+        <p>div#example3 paragraph 4</p>
+        <p>div#example3 paragraph 5</p>
+    </div><br>
+    <div id="example4">
+        <p>div#example4 paragraph 1</p>
+        <p class="para2">div#example4 paragraph 2</p>
+        <p>div#example4 paragraph 3</p>
+        <p>div#example4 paragraph 4</p>
+        <p>div#example4 paragraph 5</p>
+    </div>
+</body>
+</html>
