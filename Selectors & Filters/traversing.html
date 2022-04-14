@@ -23,7 +23,7 @@
             // select and styles just one level of the parent 
             // elem.parent().css("border", "2px solid red"); 
             
-            // select and style all parents of the selector except the body tag
+            // select and styles all parents of the selector except the body tag
             elem.parentsUntil($("body")).css("border", "2px solid red"); 
 
             // find particular element/attribute
@@ -32,11 +32,12 @@
             var border = 3;
             var leftmargin = 0;
 
+            // looping and add styles
             $("#example p").each(function(index, element){
                 $(element).css("border", border+("px solid red"))
                 .css("margin-left", leftmargin);
                 border += 1;
-                leftmargin += 10;
+                leftmargin += 10; 
             });
         });
     </script>
