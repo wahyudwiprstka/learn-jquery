@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Advanced Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Advanced Filter
+
+        // :contains('text') // select the element that contain spesific text
+        // :parent // select elements have at least one child note
+        // :has(selector) // select elements that contain at least one element that matches the selector
+        // :first-child // select elements that are the first child of their parents
+        // :last-of-type // select elements that are the last of their type among siblings
+        // nth-child() // select elements that are the nth child of their parent
+
+        $("document").ready(function(){
+            $("p:contains('2')").css("color", "red");
+            $("p:parent").css("border", "1px solid black");
+            $("div:has(p[class=para])").css("background-color", "lightgreen");
+            $("div p:first-child").css("color", "blue");
+            $("div p:last-of-type").css("color", "grey");
+            // index from 1
+            $("div p:nth-child(3)").css("font-weight", "bold");
+            // this will loop select every 2 index
+            $("div p:nth-child(2n)").css("font-style", "italic");
+        });
+    </script>
+</head>
+<body>
+    <h1>Advanced Filter</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+
+    <div id="example">
+        <p class="para">div#example paragraph 1</p>
+        <p>div#example paragraph 2</p>
+        <p>div#example paragraph 3</p>
+        <p>div#example paragraph 4</p>
+        <p>div#example paragraph 5</p>
+        <div>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+        </div>
+    </div><br>
+    <div id="example2">
+        <p>div#example2 paragraph 1</p>
+        <p>div#example2 paragraph 2</p>
+        <p>div#example2 paragraph 3</p>
+        <p>div#example2 paragraph 4</p>
+        <p>div#example2 paragraph 5</p>
+    </div><br>
+    <div id="example3">
+        <p>div#example3 paragraph 1</p>
+        <p>div#example3 paragraph 2</p>
+        <p>div#example3 paragraph 3</p>
+        <p>div#example3 paragraph 4</p>
+        <p>div#example3 paragraph 5</p>
+    </div><br>
+    <div id="example4">
+        <p>div#example4 paragraph 1</p>
+        <p>div#example4 paragraph 2</p>
+        <p>div#example4 paragraph 3</p>
+        <p>div#example4 paragraph 4</p>
+        <p>div#example4 paragraph 5</p>
+    </div>
+</body>
+</html>

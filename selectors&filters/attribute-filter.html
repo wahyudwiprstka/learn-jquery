@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Attribute Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Attribute Filters
+        // [attr] element has an attribute named attr
+        // [attr=value] element has an attribute whose value is "value"
+        // [attr^=val] element has an attribute whose value starts with "val"
+        // [attr*=alu] element has an attribute that the value includes "alu"
+        $("document").ready(function(){
+            $("p[class]").css("background-color", "lightgreen");
+            $("p[class=testing]").css("font-weight", "bold");
+            $("p[class^=test]").css("color", "red");
+            $("p[class*=gra]").css("color", "blue");
+        });
+    </script>
+</head>
+<body>
+    <h1>Template</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+
+    <div id="example">
+        <p class="paragraph">div#example paragraph 1</p>
+        <p>div#example paragraph 2</p>
+        <p>div#example paragraph 3</p>
+        <p class="paragraph">div#example paragraph 4</p>
+        <p>div#example paragraph 5</p>
+        <div>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+        </div>
+    </div><br>
+    <div id="example2">
+        <p class="paragraph">div#example2 paragraph 1</p>
+        <p class="testing">div#example2 paragraph 2</p>
+        <p>div#example2 paragraph 3</p>
+        <p class="testing">div#example2 paragraph 4</p>
+        <p>div#example2 paragraph 5</p>
+    </div><br>
+    <div id="example3">
+        <p class="testing-para">div#example3 paragraph 1</p>
+        <p class="testing">div#example3 paragraph 2</p>
+        <p>div#example3 paragraph 3</p>
+        <p class="testing-para">div#example3 paragraph 4</p>
+        <p>div#example3 paragraph 5</p>
+    </div><br>
+    <div id="example4">
+        <p class="paragraph">div#example4 paragraph 1</p>
+        <p>div#example4 paragraph 2</p>
+        <p class="testing-para">div#example4 paragraph 3</p>
+        <p>div#example4 paragraph 4</p>
+        <p>div#example4 paragraph 5</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Documents</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function(){
+            $("#example").children().css("border", "1px solid black");
+            var elem = $("p:contains('3')");
+
+            // select and styles an element before the selector
+            elem.prev().css("font-weight", "bold");
+
+            // select and styles an element after the selector 
+            elem.next().css("font-style", "italic"); 
+
+            // select and styles all parents of the selector
+            // elem.parents().css("border", "2px solid red");
+
+            // select and styles just one level of the parent 
+            // elem.parent().css("border", "2px solid red"); 
+            
+            // select and style all parents of the selector except the body tag
+            elem.parentsUntil($("body")).css("border", "2px solid red"); 
+
+            // find particular element/attribute
+            $("#example").find("div").css("background-color", "lightgreen");
+
+            var border = 3;
+            var leftmargin = 0;
+
+            $("#example p").each(function(index, element){
+                $(element).css("border", border+("px solid red"))
+                .css("margin-left", leftmargin);
+                border += 1;
+                leftmargin += 10;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Traversing Documents with jQuery</h1>
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+
+    <div id="example">
+        <p>div#example paragraph 1</p>
+        <p>div#example paragraph 2</p>
+        <p>div#example paragraph 3</p>
+        <p>div#example paragraph 4</p>
+        <p>div#example paragraph 5</p>
+        <div>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+            <p>div inside #example paragraph</p>
+        </div>
+    </div><br>
+    <div id="example2">
+        <p>div#example2 paragraph 1</p>
+        <p>div#example2 paragraph 2</p>
+        <p>div#example2 paragraph 3</p>
+        <p>div#example2 paragraph 4</p>
+        <p>div#example2 paragraph 5</p>
+    </div><br>
+    <section>
+        <h1>This is h1</h1>
+        <div id="example3">
+            <p>div#example3 paragraph 1</p>
+            <p>div#example3 paragraph 2</p>
+            <p>div#example3 paragraph 3</p>
+            <p>div#example3 paragraph 4</p>
+            <p>div#example3 paragraph 5</p>
+        </div>
+    </section>
+    <br>
+    <div id="example4">
+        <p>div#example4 paragraph 1</p>
+        <p>div#example4 paragraph 2</p>
+        <p>div#example4 paragraph 3</p>
+        <p>div#example4 paragraph 4</p>
+        <p>div#example4 paragraph 5</p>
+    </div>
+</body>
+</html>
